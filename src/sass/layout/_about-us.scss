@@ -1,0 +1,56 @@
+.about-us {
+	background-color: var(--main-bg);
+	padding-top: 16px;
+	padding-bottom: 16px;
+
+	&__text {
+		padding-bottom: 10px;
+		text-align: center;
+		font-size: 10px;
+		font-family: Kyiv Type Sans Regular;
+		&:last-child {
+			padding-bottom: 0px;
+		}
+	}
+	&-list {
+		margin-bottom: 15px;
+	}
+	&-item {
+		display: flex;
+		align-items: center;
+
+		&::before {
+			content: "-";
+			margin-right: 5px;
+		}
+		&__text {
+			font-family: Kyiv Type Sans Regular;
+			font-size: 10px;
+			letter-spacing: 0.3px;
+		}
+	}
+}
+
+.qoute-wrapper {
+	margin-bottom: 15px;
+
+	display: flex;
+	justify-content: end;
+
+	font-family: Kyiv Type Sans Regular;
+	&__text {
+		padding-bottom: 5px;
+		margin-left: 0;
+
+		width: 180px;
+
+		font-size: 9px;
+
+		border-bottom: 1px black solid;
+	}
+}
+
+.bold-text {
+	font-size: var(--font-size11);
+	font-family: Kyiv Type Sans Bold-;
+}

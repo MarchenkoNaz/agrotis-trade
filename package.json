@@ -18,7 +18,8 @@
 		"url": "https://github.com/MarchenkoNaz/agrotis-trade/issues"
 	},
 	"dependencies": {
-		"modern-normalize": "^1.1.0"
+		"modern-normalize": "^1.1.0",
+		"scss-reset": "^1.4.2"
 	},
 	"devDependencies": {
 		"@parcel/transformer-sass": "^2.6.0",

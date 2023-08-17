@@ -1,0 +1,63 @@
+.services {
+	padding-top: 16px;
+	padding-bottom: 16px;
+
+	background: url("../images/Background-mobile.jpg") center no-repeat;
+
+	&-title {
+		color: #fff;
+		text-align: center;
+		margin-bottom: 24px;
+		font-size: 32px;
+		font-family: Kyiv Type Sans Heavy2;
+	}
+
+	&-list {
+		&-item {
+			position: relative;
+			margin-bottom: 10px;
+			&__title {
+				position: relative;
+
+				text-align: center;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 15px;
+				padding-right: 30px;
+
+				font-family: Kyiv Type Sans Heavy2;
+			}
+
+			&__text {
+				position: relative;
+
+				margin-bottom: 11px;
+
+				height: 0;
+				overflow: hidden;
+				overflow-y: auto;
+				text-align: center;
+
+				font-family: Kyiv Type Sans Regular;
+				font-size: 10px;
+
+				background-color: var(--main-bg);
+				border-radius: 6px;
+
+				transition: 0.5s;
+			}
+
+			&__wrapper {
+				border-radius: 6px;
+				background-color: var(--btn-bg);
+				width: 100%;
+			}
+		}
+		&-svg {
+			position: absolute;
+			top: 50%;
+			right: 3%;
+			transform: translateY(-50%) rotate(180deg);
+		}
+	}
+}

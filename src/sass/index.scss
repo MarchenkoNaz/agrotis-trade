@@ -1,2 +1,5 @@
-@import './common';
-@import './example';
+@use "abstract";
+@use "scss-reset/reset";
+@use "base";
+@use "layout";
+@use "components";
