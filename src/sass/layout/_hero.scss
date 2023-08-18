@@ -1,19 +1,28 @@
 .hero {
-	height: 260px;
-	background: url("../images/mobile-hero.jpg") no-repeat center;
-	background-size: cover;
-	padding-top: 26px;
-	padding-bottom: 26px;
-	color: var(--font-color-wh);
 	position: relative;
 
+	padding-top: 26px;
+	padding-bottom: 26px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	background: url("../images/mobile-hero.jpg") no-repeat center;
+	background-size: cover;
+
+	color: var(--font-color-wh);
+
 	&-title {
-		text-align: center;
-		letter-spacing: 1.7px;
-		font-size: var(--font-size20);
-		font-family: "Kyiv Type Sans Black2";
-		text-transform: uppercase;
 		margin-bottom: 29px;
+
+		text-align: center;
+		text-transform: uppercase;
+
+		letter-spacing: 1.7px;
+
+		font-size: var(--font-size36);
+		font-family: "Kyiv Type Sans Black2";
 	}
 
 	&-subtitle {
@@ -21,9 +30,10 @@
 		padding-right: 8px;
 
 		font-family: "Kyiv Type Sans Medium2";
-		font-size: var(--font-size14);
+		font-size: var(--font-size18);
 
 		text-align: center;
+
 		letter-spacing: 0.42px;
 	}
 

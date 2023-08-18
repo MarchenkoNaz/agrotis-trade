@@ -1,0 +1,286 @@
+@charset "UTF-8";
+:root {
+	--header-bg: #fbf5d6;
+	--main-bg: #edd65a;
+	--btn-bg: #edd65ae5;
+	--photo-filter: #00000054;
+	--text-bg: #00000054;
+	--font-color-wh: #ffffff;
+	--font-color-bl: #000000;
+	--font-color-bl50: #00000080;
+	--base-font-size: 16px; /* Базовий розмір шрифту */
+	--font-size11: 0.6875rem; /* 11px / 16px = 0.6875rem */
+	--font-size12: 0.75rem; /* 12px / 16px = 0.75rem */
+	--font-size13: 0.8125rem; /* 13px / 16px = 0.8125rem */
+	--font-size14: 0.875rem; /* 14px / 16px = 0.875rem */
+	--font-size15: 0.9375rem; /* 15px / 16px = 0.9375rem */
+	--font-size16: 1rem; /* 16px / 16px = 1rem */
+	--font-size20: 1.25rem; /* 20px / 16px = 1.25rem */
+	--font-size22: 1.375rem; /* 22px / 16px = 1.375rem */
+	--font-size36: 2.25rem; /* 36px / 16px = 2.25rem */
+	--font-size40: 2.5rem; /* 40px / 16px = 2.5rem */
+	--font-size50: 3.125rem; /* 50px / 16px = 3.125rem */
+}
+
+body {
+	font-family: "Kyiv Type Sans";
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.section {
+	padding-left: 22px;
+	padding-right: 22px;
+	height: 100vh; /* Висота 100% від висоти екрану */
+	width: 100%; /* Ширина 100% */
+}
+
+@font-face {
+	font-family: "Kyiv Type Sans Black2";
+	src:
+		url("../fonts/KyivTypeSans-Black2.woff2") format(woff2),
+		url("../fonts/KyivTypeSans-Black2.woff") format(woff),
+		url("../fonts/KyivTypeSans-Black2.eot") format(eot);
+}
+@font-face {
+	font-family: "Kyiv Type Sans Bold-";
+	src:
+		url("../fonts/KyivTypeSans-Bold-.woff2") format(woff2),
+		url("../fonts/KyivTypeSans-Bold-.woff") format(woff),
+		url("../fonts/KyivTypeSans-Bold-.eot") format(eot);
+}
+@font-face {
+	font-family: "Kyiv Type Sans Bold2";
+	src:
+		url("../fonts/KyivTypeSans-Bold2.woff2") format(woff2),
+		url("../fonts/KyivTypeSans-Bold2.woff") format(woff),
+		url("../fonts/KyivTypeSans-Bold2.eot") format(eot);
+}
+@font-face {
+	font-family: "Kyiv Type Sans Heavy2";
+	src:
+		url("../fonts/KyivTypeSans-Heavy2.woff2") format(woff2),
+		url("../fonts/KyivTypeSans-Heavy2.woff") format(woff),
+		url("../fonts/KyivTypeSans-Heavy2.eot") format(eot);
+}
+@font-face {
+	font-family: "Kyiv Type Sans Heavy-";
+	src:
+		url("../fonts/KyivTypeSans-Heavy-.woff2") format(woff2),
+		url("../fonts/KyivTypeSans-Heavy-.woff") format(woff),
+		url("../fonts/KyivTypeSans-Heavy-.eot") format(eot);
+}
+@font-face {
+	font-family: "Kyiv Type Sans Medium";
+	src:
+		url("../fonts/KyivTypeSans-Medium.woff2") format(woff2),
+		url("../fonts/KyivTypeSans-Medium.woff") format(woff),
+		url("../fonts/KyivTypeSans-Medium.eot") format(eot);
+}
+@font-face {
+	font-family: "Kyiv Type Sans Medium2";
+	src:
+		url("../fonts/KyivTypeSans-Medium2.woff2") format(woff2),
+		url("../fonts/KyivTypeSans-Medium2.woff") format(woff),
+		url("../fonts/KyivTypeSans-Medium2.eot") format(eot);
+}
+@font-face {
+	font-family: "Kyiv Type Sans Medium3";
+	src:
+		url("../fonts/KyivTypeSans-Medium3.woff2") format(woff2),
+		url("../fonts/KyivTypeSans-Medium3.woff") format(woff),
+		url("../fonts/KyivTypeSans-Medium3.eot") format(eot);
+}
+@font-face {
+	font-family: "Kyiv Type Sans Regular";
+	src:
+		url("../fonts/KyivTypeSans-Regular.woff2") format(woff2),
+		url("../fonts/KyivTypeSans-Regular.woff") format(woff),
+		url("../fonts/KyivTypeSans-Regular.eot") format(eot);
+}
+@font-face {
+	font-family: "Kyiv Type Sans Regular2";
+	src:
+		url("../fonts/KyivTypeSans-Regular2.woff2") format(woff2),
+		url("../fonts/KyivTypeSans-Regular2.woff") format(woff),
+		url("../fonts/KyivTypeSans-Regular2.eot") format(eot);
+}
+@font-face {
+	font-family: "Kyiv Type Sans Light";
+	src:
+		url("../fonts/KyivTypeSans-Light.woff2") format(woff2),
+		url("../fonts/KyivTypeSans-Light.woff") format(woff),
+		url("../fonts/KyivTypeSans-Light.eot") format(eot);
+}
+@font-face {
+	font-family: "Kyiv Type Sans Light2";
+	src:
+		url("../fonts/KyivTypeSans-Light2.woff2") format(woff2),
+		url("../fonts/KyivTypeSans-Light2.woff") format(woff),
+		url("../fonts/KyivTypeSans-Light2.eot") format(eot);
+}
+.header {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 22px;
+	padding-right: 22px;
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--header-bg);
+}
+
+.burger-menu {
+	display: none;
+}
+
+.hero {
+	position: relative;
+	background: url("../images/mobile-hero.jpg") no-repeat center;
+	background-size: cover;
+	padding-top: 26px;
+	padding-bottom: 26px;
+	color: var(--font-color-wh);
+	position: relative;
+}
+.hero-title {
+	text-align: center;
+	letter-spacing: 1.7px;
+	font-size: var(--font-size20);
+	font-family: "Kyiv Type Sans Black2";
+	text-transform: uppercase;
+	margin-bottom: 29px;
+}
+.hero-subtitle {
+	padding-left: 8px;
+	padding-right: 8px;
+	font-family: "Kyiv Type Sans Medium2";
+	font-size: var(--font-size14);
+	text-align: center;
+	letter-spacing: 0.42px;
+}
+.hero-wrapper {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background-color: var(--photo-filter);
+}
+.hero-svg {
+	display: flex;
+	flex-direction: column;
+}
+.hero-svg__triangle {
+	display: none;
+	transform: rotate(180deg);
+}
+.hero-svg__hand {
+	position: absolute;
+	right: 50%;
+	top: 85%;
+	transform: translateX(-50%);
+}
+
+.about-us {
+	background-color: var(--main-bg);
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+.about-us__text {
+	padding-bottom: 10px;
+	text-align: center;
+	font-size: 10px;
+	font-family: Kyiv Type Sans Regular;
+}
+.about-us__text:last-child {
+	padding-bottom: 0px;
+}
+.about-us-list {
+	margin-bottom: 15px;
+}
+.about-us-item {
+	display: flex;
+	align-items: center;
+}
+.about-us-item::before {
+	content: "-";
+	margin-right: 5px;
+}
+.about-us-item__text {
+	font-family: Kyiv Type Sans Regular;
+	font-size: 10px;
+	letter-spacing: 0.3px;
+}
+
+.qoute-wrapper {
+	margin-bottom: 15px;
+	display: flex;
+	justify-content: end;
+	font-family: Kyiv Type Sans Regular;
+}
+.qoute-wrapper__text {
+	padding-bottom: 5px;
+	margin-left: 0;
+	width: 180px;
+	font-size: 9px;
+	border-bottom: 1px black solid;
+}
+
+.bold-text {
+	font-size: var(--font-size11);
+	font-family: Kyiv Type Sans Bold-;
+}
+
+.services {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background: url("../images/Background-mobile.jpg") center no-repeat;
+}
+.services-title {
+	color: #fff;
+	text-align: center;
+	margin-bottom: 24px;
+	font-size: 32px;
+	font-family: Kyiv Type Sans Heavy2;
+}
+.services-list-item {
+	position: relative;
+	margin-bottom: 10px;
+}
+.services-list-item__title {
+	position: relative;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 30px;
+	font-family: Kyiv Type Sans Heavy2;
+}
+.services-list-item__text {
+	position: relative;
+	margin-bottom: 11px;
+	height: 0;
+	overflow: hidden;
+	overflow-y: auto;
+	text-align: center;
+	font-family: Kyiv Type Sans Regular;
+	font-size: 10px;
+	background-color: var(--main-bg);
+	border-radius: 6px;
+	transition: 0.5s;
+}
+.services-list-item__wrapper {
+	border-radius: 6px;
+	background-color: var(--btn-bg);
+	width: 100%;
+}
+.services-list-svg {
+	position: absolute;
+	top: 50%;
+	right: 3%;
+	transform: translateY(-50%) rotate(180deg);
+} /*# sourceMappingURL=index.css.map */

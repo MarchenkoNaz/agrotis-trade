@@ -1,30 +1,33 @@
 .services {
+	max-height: 100vh;
 	padding-top: 16px;
 	padding-bottom: 16px;
 
-	background: url("../images/Background-mobile.jpg") center no-repeat;
+	background: url("../images/Background-mobile.jpg") no-repeat center;
+	background-size: cover;
 
 	&-title {
 		color: #fff;
 		text-align: center;
 		margin-bottom: 24px;
-		font-size: 32px;
+		font-size: var(--font-size36);
 		font-family: Kyiv Type Sans Heavy2;
 	}
 
 	&-list {
+		min-height: 85%;
 		&-item {
 			position: relative;
 			margin-bottom: 10px;
 			&__title {
 				position: relative;
 
-				text-align: center;
 				padding-top: 10px;
 				padding-bottom: 10px;
 				padding-left: 15px;
 				padding-right: 30px;
 
+				text-align: center;
 				font-family: Kyiv Type Sans Heavy2;
 			}
 
@@ -32,25 +35,32 @@
 				position: relative;
 
 				margin-bottom: 11px;
-
+				// padding: 10px;
+				padding-left: 10px;
+				padding-right: 15px;
 				height: 0;
 				overflow: hidden;
 				overflow-y: auto;
 				text-align: center;
 
 				font-family: Kyiv Type Sans Regular;
-				font-size: 10px;
+				font-size: var(--font-size10);
 
 				background-color: var(--main-bg);
-				border-radius: 6px;
-
+				// border-radius: 6px;
+				border-end-start-radius: 6px;
+				border-end-end-radius: 6px;
 				transition: 0.5s;
 			}
 
 			&__wrapper {
 				border-radius: 6px;
 				background-color: var(--btn-bg);
-				width: 100%;
+				min-width: 100%;
+
+				&-title {
+					position: relative;
+				}
 			}
 		}
 		&-svg {
