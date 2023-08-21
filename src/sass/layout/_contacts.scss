@@ -1,0 +1,25 @@
+.contacts {
+	padding-top: 18px;
+	padding-bottom: 18px;
+	background-color: var(--main-bg);
+
+	&-title {
+		margin-bottom: 40px;
+
+		font-family: Kyiv Type Sans Heavy2;
+		font-size: var(--font-size22);
+	}
+
+	&-subtitle {
+		margin-bottom: 30px;
+		text-align: center;
+		font-family: Kyiv Type Sans Regular2;
+		font-size: var(--font-size14);
+	}
+
+	&-text {
+		margin-bottom: 14px;
+		text-align: center;
+		font-family: Kyiv Type Sans Regular;
+	}
+}

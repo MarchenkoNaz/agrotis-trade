@@ -2,9 +2,9 @@
 	padding-top: 18px;
 	padding-bottom: 18px;
 	position: relative;
-	background-color: var(--main-bg);
 	display: flex;
 	flex-direction: column;
+	background-color: var(--main-bg);
 
 	&::after {
 		content: "";
@@ -32,8 +32,9 @@
 	}
 
 	&-title {
+		text-align: center;
 		margin-top: 30px;
-		margin-bottom: 50px;
+		margin-bottom: 60px;
 
 		font-family: Kyiv Type Sans Heavy2;
 		font-size: var(--font-size22);
@@ -53,8 +54,10 @@
 	&-text {
 		min-width: 120px;
 		max-width: 200px;
+		margin-bottom: 20px;
+
 		letter-spacing: 0.65px;
-		margin-bottom: 35px;
+		font-size: var(--font-size15);
 	}
 }
 
@@ -67,10 +70,12 @@
 }
 
 .contact-us {
+	margin-left: auto;
+	margin-right: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	z-index: 4;
+	z-index: 3;
 
 	&__text {
 		margin-bottom: 10px;

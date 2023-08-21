@@ -1,0 +1,22 @@
+.footer {
+	padding-top: 18px;
+	padding-bottom: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #000;
+	color: var(--font-color-wh);
+
+	&-text {
+		margin-bottom: 10px;
+		font-family: Kyiv Type Sans Bold 2;
+		text-transform: uppercase;
+		font-size: var(--font-size16);
+	}
+	&-copyright {
+		font-family: Kyiv Type Sans Bold 2;
+		text-transform: uppercase;
+		font-size: var(--font-size12);
+	}
+}
