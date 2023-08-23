@@ -1,11 +1,35 @@
+@use "../utils";
+
 .services {
-	// max-height: 100vh;
 	padding-top: 16px;
 	padding-bottom: 16px;
 
-	background: url("../images/Background-mobile.jpg") no-repeat center;
-	background-size: cover;
+	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+		url("../images/mobile/services-background.jpg");
+	@include utils.retina {
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url("../images/mobile/services-background@2.jpg");
+	}
 
+	@media (min-width: 481px) {
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url("../images/tablet/services-background.jpg");
+		@include utils.retina {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+				url("../images/tablet/services-background@2.jpg");
+		}
+	}
+	@media (min-width: 769px) {
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url("../images/dekstop/services-background.jpg");
+		@include utils.retina {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+				url("../images/dekstop/services-background@2.jpg");
+		}
+	}
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	&-title {
 		color: #fff;
 		text-align: center;
