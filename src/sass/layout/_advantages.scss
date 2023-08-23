@@ -1,4 +1,5 @@
 .advantages {
+	height: 500px;
 	position: relative;
 
 	padding-top: 18px;
@@ -9,11 +10,21 @@
 	justify-content: center;
 	align-items: center;
 
-	background: url("../images/mobile-add-info.jpg") no-repeat center;
+	background-image: -webkit-gradient(
+			linear,
+			left top,
+			left bottom,
+			from(rgba(0, 0, 0, 0.35)),
+			to(rgba(0, 0, 0, 0.35))
+		),
+		url(../images/mobile-add-info.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
 	background-size: cover;
 }
 .slideshow-container {
-	width: 320px;
+	margin-bottom: 20px;
+	min-width: 320px;
 }
 .card {
 	display: flex;
@@ -31,18 +42,28 @@
 
 		font-family: Kyiv Type Sans Bold-;
 		font-size: var(--font-size20);
+		@media (min-width: 768px) {
+			font-size: var(--font-size36);
+		}
 	}
 
 	&-text {
 		padding: 10;
 
 		font-family: Kyiv Type Sans Regular;
-		background: rgba(0, 0, 0, 0.35);
+		letter-spacing: 0.39px;
+		@media (min-width: 768px) {
+			font-size: var(--font-size20);
+			letter-spacing: 0.6px;
+			line-height: 1.4;
+		}
 	}
 }
 
 .dots-wrapper {
 	display: flex;
+	position: absolute;
+	bottom: 15%;
 }
 
 .dot {

@@ -1,5 +1,5 @@
 .services {
-	max-height: 100vh;
+	// max-height: 100vh;
 	padding-top: 16px;
 	padding-bottom: 16px;
 
@@ -29,6 +29,7 @@
 
 				text-align: center;
 				font-family: Kyiv Type Sans Heavy2;
+				font-size: var(--font-size20);
 			}
 
 			&__text {
@@ -45,12 +46,15 @@
 
 				font-family: Kyiv Type Sans Regular;
 				font-size: var(--font-size10);
+				line-height: 1.4;
 
 				background-color: var(--main-bg);
-				// border-radius: 6px;
 				border-end-start-radius: 6px;
 				border-end-end-radius: 6px;
 				transition: 0.5s;
+				height: 100%;
+				padding-top: 20px;
+				padding-bottom: 20px;
 			}
 
 			&__wrapper {

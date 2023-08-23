@@ -23,6 +23,9 @@
 
 		font-size: var(--font-size36);
 		font-family: "Kyiv Type Sans Black2";
+		@media (min-width: 768px) {
+			font-size: var(--font-size40);
+		}
 	}
 
 	&-subtitle {
@@ -35,6 +38,9 @@
 		text-align: center;
 
 		letter-spacing: 0.42px;
+		@media (min-width: 768px) {
+			font-size: var(--font-size22);
+		}
 	}
 
 	&-wrapper {
@@ -52,7 +58,7 @@
 		}
 		&__hand {
 			position: absolute;
-			right: 44%;
+			right: 47%;
 			top: 85%;
 		}
 	}

@@ -3,11 +3,22 @@
 	padding-bottom: 18px;
 	background-color: var(--main-bg);
 
+	&-wrapper {
+		@media (min-width: 768px) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
 	&-title {
 		margin-bottom: 40px;
 
 		font-family: Kyiv Type Sans Heavy2;
 		font-size: var(--font-size22);
+		@media (min-width: 768px) {
+			text-align: center;
+		}
 	}
 
 	&-subtitle {
@@ -15,11 +26,26 @@
 		text-align: center;
 		font-family: Kyiv Type Sans Regular2;
 		font-size: var(--font-size14);
+		@media (min-width: 769px) {
+			min-width: 300px;
+		}
+		@media (min-width: 769px) {
+			max-width: 300px;
+			margin-bottom: 0;
+			font-size: var(--font-size16);
+		}
 	}
 
 	&-text {
 		margin-bottom: 14px;
 		text-align: center;
 		font-family: Kyiv Type Sans Regular;
+	}
+
+	&-section {
+		@media (min-width: 768px) {
+			max-width: 300px;
+			margin: 0;
+		}
 	}
 }

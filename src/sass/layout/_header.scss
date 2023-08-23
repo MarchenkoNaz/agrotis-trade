@@ -37,6 +37,50 @@
 	}
 }
 
-.burger-menu {
+.navigation {
 	display: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	width: 100%;
+	background-color: var(--header-bg);
+
+	@media (min-width: 768px) {
+		display: flex;
+		align-items: center;
+		width: fit-content;
+	}
+	&-list {
+		padding: 22px;
+		font-family: Kyiv Type Sans Medium;
+		font-size: var(--font-size22);
+		@media (min-width: 768px) {
+			display: flex;
+			padding: 0;
+			font-size: var(--font-size15);
+		}
+		&-link {
+			@media (min-width: 768px) {
+				letter-spacing: 0.39px;
+			}
+		}
+	}
+	&-item {
+		margin-bottom: 10px;
+		@media (min-width: 768px) {
+			margin-right: 15px;
+			margin-bottom: 0;
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	@media (min-width: 768px) {
+		position: static;
+	}
+}
+.burger-menu-svg {
+	@media (min-width: 768px) {
+		display: none;
+	}
 }
