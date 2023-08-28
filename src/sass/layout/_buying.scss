@@ -29,7 +29,7 @@
 		margin-left: 30px;
 		padding-top: 20px;
 		padding-bottom: 20px;
-		width: 200px;
+		width: 300px;
 		height: 200px;
 		background: radial-gradient(circle, hsla(51, 80%, 64%, 1) 0%, hsla(42, 84%, 48%, 1) 100%);
 		display: flex;
@@ -38,7 +38,8 @@
 		margin-bottom: 30px;
 		align-items: center;
 		border-radius: 6px;
-		@media (min-width: 768px) {
+
+		@media (min-width: 500px) {
 			flex-basis: calc(100% / 2 - 30px);
 		}
 		@media (min-width: 1200px) {
@@ -83,10 +84,10 @@
 	// }
 	&-text {
 		margin-bottom: 20px;
-
+		text-align: center;
 		letter-spacing: 0.65px;
 		font-size: var(--font-size20);
-		font-family: Kyiv Type Sans Heavy2;
+		font-family: Kyiv Type Sans Regular2;
 		// 	@media (min-width: 410px) {
 		// 		padding-left: 15%;
 		// 		padding-right: 5%;
