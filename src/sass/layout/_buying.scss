@@ -8,6 +8,7 @@
 	flex-direction: column;
 	background-color: var(--main-bg);
 	overflow: hidden;
+	align-items: end;
 
 	&-title {
 		text-align: center;
@@ -18,103 +19,22 @@
 		font-size: var(--font-size36);
 	}
 
-	&-list {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		margin-left: calc(-1 * 30px);
-	}
-	&-item {
+	&__wrapper {
+		width: 100%;
 		margin-bottom: 30px;
-		margin-left: 30px;
-		padding-top: 20px;
-		padding-bottom: 20px;
-		width: 300px;
-		height: 200px;
-		background: radial-gradient(circle, hsla(51, 80%, 64%, 1) 0%, hsla(42, 84%, 48%, 1) 100%);
+
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		margin-bottom: 30px;
-		align-items: center;
-		border-radius: 6px;
-
-		@media (min-width: 500px) {
-			flex-basis: calc(100% / 2 - 30px);
-		}
-		@media (min-width: 1200px) {
-			flex-basis: calc(100% / 3 - 30px);
-		}
-
-		&__title {
-			font-family: Kyiv Type Sans Heavy2;
-			font-size: var(--font-size20);
-			text-transform: capitalize;
+		@media (min-width: 420px) {
+			width: 70%;
 		}
 	}
-
-	// &__wrapper {
-	// 	width: 100%;
-	// 	margin-bottom: 30px;
-
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	align-items: end;
-
-	// @media (min-width: 450px) {
-	// 	padding-left: 5%;
-	// 	align-items: center;
-	// }
-	// @media (min-width: 481px) {
-	// 	align-items: end;
-	// }
-	// @media (min-width: 768px) {
-	// 	align-items: end;
-
-	// 	padding-right: 5%;
-	// }
-	// @media (min-width: 850px) {
-	// 	padding-right: 15%;
-	// }
-	// @media (min-width: 1000px) {
-	// 	padding-right: 5%;
-	// 	padding-right: 5%;
-	// 	align-items: center;
-	// }
-	// }
 	&-text {
 		margin-bottom: 20px;
 		text-align: center;
 		letter-spacing: 0.65px;
 		font-size: var(--font-size20);
 		font-family: Kyiv Type Sans Regular2;
-		// 	@media (min-width: 410px) {
-		// 		padding-left: 15%;
-		// 		padding-right: 5%;
-		// 		min-width: 250px;
-		// 		max-width: 400px;
-		// 	}
-		// 	@media (min-width: 481px) {
-		// 		padding: 0;
-
-		// 		min-width: 120px;
-		// 		max-width: 200px;
-		// 	}
-		// 	@media (min-width: 600px) {
-		// 		padding: 0;
-
-		// 		min-width: 400px;
-		// 	}
-
-		// 	@media (min-width: 768px) {
-		// 		min-width: 400px;
-
-		// 		padding-left: 5%;
-		// 		font-size: var(--font-size20);
-		// 	}
-		// 	@media (min-width: 930px) {
-		// 		min-width: 600px;
-		// 	}
 	}
 }
 
@@ -170,68 +90,76 @@
 	}
 }
 
-// .background {
-// 	&-wrapper {
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 		width: 100%;
-// 		height: 100%;
-// 	}
-// 	&-left {
-// 		position: absolute;
-// 		top: 0%;
-// 		left: -9%;
-// 		width: 45%;
-// 		height: 100%;
-// 		background-size: contain;
-// 		background-repeat: no-repeat;
-// 		mix-blend-mode: multiply;
-// 		background-image: url("../images/mobile/buying-background-left.png");
-// 		@include utils.retina {
-// 			background-image: url("../images/mobile/buying-background-left@2.png");
-// 		}
+.background {
+	&-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&-left {
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		width: 50%;
+		height: 100%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		mix-blend-mode: multiply;
+		@media (min-width: 420px) {
+			background-image: url("../images/mobile/buying-background-left.png");
+			@include utils.retina {
+				background-image: url("../images/mobile/buying-background-left@2.png");
+			}
+		}
 
-// 		@media (min-width: 481px) {
-// 			top: 25%;
-// 			transform: scale(1.4);
-// 			background-image: url("../images/tablet/buying-background-left.png");
-// 			@include utils.retina {
-// 				background-image: url("../images/tablet/buying-background-left@2.png");
-// 			}
-// 		}
-// 		@media (min-width: 769px) {
-// 			background-image: url("../images/dekstop/buying-background-left.png");
-// 			@include utils.retina {
-// 				background-image: url("../images/dekstop/buying-background-left@2.png");
-// 			}
-// 		}
-// 	}
-// 	&-right {
-// 		position: absolute;
-// 		top: -53px;
-// 		right: 0;
-// 		width: 40%;
-// 		height: 40%;
-// 		background-size: cover;
-// 		background-repeat: no-repeat;
-// 		mix-blend-mode: multiply;
-// 		background-image: url("../images/mobile/buying-background-right.png");
-// 		@include utils.retina {
-// 			background-image: url("../images/mobile/buying-background-right@2.png");
-// 		}
-
-// 		@media (min-width: 481px) {
-// 			background-image: url("../images/tablet/buying-background-right.png");
-// 			@include utils.retina {
-// 				background-image: url("../images/tablet/buying-background-right@2.png");
-// 			}
-// 		}
-// 		@media (min-width: 769px) {
-// 			background-image: url("../images/dekstop/buying-background-right.png");
-// 			@include utils.retina {
-// 				background-image: url("../images/dekstop/buying-background-right@2.png");
-// 			}
-// 		}
-// 	}
-// }
+		@media (min-width: 481px) {
+			top: 28%;
+			left: -23%;
+			transform: scale(1.5);
+			background-image: url("../images/tablet/buying-background-left.png");
+			@include utils.retina {
+				background-image: url("../images/tablet/buying-background-left@2.png");
+			}
+		}
+		@media (min-width: 539px) {
+			top: 18%;
+		}
+		@media (min-width: 769px) {
+			top: 9%;
+			background-image: url("../images/dekstop/buying-background-left.png");
+			@include utils.retina {
+				background-image: url("../images/dekstop/buying-background-left@2.png");
+			}
+		}
+	}
+	&-right {
+		position: absolute;
+		top: -15%;
+		right: -5%;
+		width: 50%;
+		height: 45%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		mix-blend-mode: multiply;
+		@media (min-width: 420px) {
+			background-image: url("../images/mobile/buying-background-right.png");
+			@include utils.retina {
+				background-image: url("../images/mobile/buying-background-right@2.png");
+			}
+		}
+		@media (min-width: 481px) {
+			background-image: url("../images/tablet/buying-background-right.png");
+			@include utils.retina {
+				background-image: url("../images/tablet/buying-background-right@2.png");
+			}
+		}
+		@media (min-width: 769px) {
+			background-image: url("../images/dekstop/buying-background-right.png");
+			@include utils.retina {
+				background-image: url("../images/dekstop/buying-background-right@2.png");
+			}
+		}
+	}
+}
