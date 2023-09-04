@@ -1,6 +1,7 @@
 const modalbackdrop = document.querySelector('.backdrop-wrapper');
 const modal = document.querySelector('.modal')
 const openModalButtons = document.querySelectorAll('.data-open-modal');
+const closeModalButton = modal.querySelector('.close-form');
 
 function openModal() {
 	modalbackdrop.classList.add('active');
@@ -12,10 +13,10 @@ function closeModal() {
 	modalbackdrop.classList.remove('active');
 	modal.classList.remove('active');
 	document.body.style.overflow = '';
+
 }
 openModalButtons.forEach(button => button.addEventListener('click', openModal))
 
-const closeModalButton = modal.querySelector('.close-form');
 closeModalButton.addEventListener('click', closeModal);
 
 modalbackdrop.addEventListener('click', (event) => {
