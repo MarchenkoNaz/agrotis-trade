@@ -28,8 +28,6 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	display: flex;
-	align-items: center;
 
 	&-title {
 		color: #fff;
@@ -64,7 +62,6 @@
 
 			&__text {
 				padding: 0 15px;
-				height: 0%;
 				overflow: hidden;
 				overflow-y: auto;
 

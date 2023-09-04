@@ -3,7 +3,6 @@ const accordion = document.querySelectorAll('.services-list-item');
 accordion.forEach((element) => {
 	let heading = element.querySelector('.services-list-item__title');
 	let description = element.querySelector('.services-list-item__text');
-	// description.style.height = '0px';
 
 	heading.addEventListener('click', () => {
 		element.classList.toggle('services-list-item--active');
@@ -11,6 +10,7 @@ accordion.forEach((element) => {
 			description.style.height = `${description.scrollHeight}px`;
 		} else {
 			description.style.height = '0px';
+
 		}
 
 		accordion.forEach((item) => {
