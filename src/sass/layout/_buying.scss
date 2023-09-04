@@ -1,18 +1,15 @@
 @use "../utils";
 
 .buying {
-	padding-top: 18px;
-	padding-bottom: 18px;
 	position: relative;
 	display: flex;
-	flex-direction: column;
+	align-items: center;
+	padding-top: 30px;
 	background-color: var(--main-bg);
 	overflow: hidden;
-	align-items: end;
 
 	&-title {
 		text-align: center;
-		margin-top: 30px;
 		margin-bottom: 60px;
 
 		font-family: Kyiv Type Sans Heavy2;
@@ -26,7 +23,16 @@
 		display: flex;
 		flex-direction: column;
 		@media (min-width: 420px) {
-			width: 70%;
+			padding-left: 23%;
+		}
+		@media (min-width: 481px) {
+			padding-left: 33%;
+		}
+		@media (min-width: 1200px) {
+			width: 50%;
+			margin-left: auto;
+			margin-right: auto;
+			padding-left: 0;
 		}
 	}
 	&-text {
@@ -133,33 +139,58 @@
 				background-image: url("../images/dekstop/buying-background-left@2.png");
 			}
 		}
+		@media (min-width: 900px) {
+			left: -7%;
+		}
 	}
 	&-right {
 		position: absolute;
-		top: -15%;
-		right: -5%;
+		top: -17%;
+		right: -8%;
 		width: 50%;
 		height: 45%;
 		background-size: cover;
 		background-repeat: no-repeat;
 		mix-blend-mode: multiply;
+		transform: scale(0.7);
+
 		@media (min-width: 420px) {
+			transform: scale(0.8);
+
 			background-image: url("../images/mobile/buying-background-right.png");
 			@include utils.retina {
 				background-image: url("../images/mobile/buying-background-right@2.png");
 			}
 		}
 		@media (min-width: 481px) {
+			top: -10%;
+			right: -3%;
+			transform: scale(1);
+
 			background-image: url("../images/tablet/buying-background-right.png");
 			@include utils.retina {
 				background-image: url("../images/tablet/buying-background-right@2.png");
 			}
 		}
+		@media (min-width: 725px) {
+			transform: scale(0.7);
+			top: -14%;
+			right: -12%;
+		}
 		@media (min-width: 769px) {
+			transform: scale(0.5);
+			top: -16%;
+			right: -13%;
+			height: 60%;
 			background-image: url("../images/dekstop/buying-background-right.png");
 			@include utils.retina {
 				background-image: url("../images/dekstop/buying-background-right@2.png");
 			}
+		}
+		@media (min-width: 1200px) {
+			top: -25%;
+
+			height: 100%;
 		}
 	}
 }

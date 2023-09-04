@@ -7,10 +7,23 @@ a {
 }
 
 .section {
-	padding-left: 22px;
-	padding-right: 22px;
-	width: 100%;
+	padding-top: 16px;
+	padding-bottom: 16px;
 }
 .fullpage {
 	height: 100vh;
+}
+.container {
+	width: 100%;
+	max-width: 1210px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.df {
+	display: flex;
+}
+.dfAlignColCenter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
