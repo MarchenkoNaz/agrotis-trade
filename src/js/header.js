@@ -10,12 +10,17 @@ const containHide = () => header.classList.contains('hide');
 const screenWidth = () => window.innerWidth || document.documentElement.clientWidth;
 
 const toggleHeader = () => {
+
 	if (scrollPosition() > lastScroll && !containHide() && scrollPosition() > defaultOffset) {
+
 		header.classList.add('hide');
 		headerMenu.classList.remove('menu-open');
 		burgerButton.classList.remove('active');
-	} else if (scrollPosition() < lastScroll && containHide()) {
+
+	}
+	else if (scrollPosition() < lastScroll && containHide()) {
 		header.classList.remove('hide');
+
 	}
 	lastScroll = scrollPosition();
 };
