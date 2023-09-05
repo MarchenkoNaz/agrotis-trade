@@ -9,8 +9,8 @@
 	justify-content: center;
 	align-items: center;
 	z-index: 100;
-	opacity: 0; /* Изначально модалка скрыта */
-	visibility: hidden; /* Изначально модалка скрыта */
+	opacity: 0;
+	visibility: hidden;
 	transition:
 		opacity 300ms ease-in-out,
 		visibility 300ms ease-in-out;
@@ -58,6 +58,7 @@
 		font-family: Kyiv Type Sans Regular2;
 		font-size: var(--font-size16);
 
+		border: none;
 		border-radius: 6px;
 	}
 	&__textarea-additional {
