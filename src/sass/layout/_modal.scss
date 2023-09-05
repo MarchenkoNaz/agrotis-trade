@@ -28,7 +28,7 @@
 	left: 0;
 	min-height: 38%;
 	width: 95%;
-	max-width: 600px;
+	max-width: 900px;
 	background-color: #000;
 	border-radius: 6px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -50,33 +50,42 @@
 	padding: 20px;
 	color: var(--font-color-wh);
 	&__input {
-		height: 40px;
+		height: 60px;
 		width: 100%;
 		padding: 5px 10px;
 		margin-bottom: 10px;
 
 		font-family: Kyiv Type Sans Regular2;
-		font-size: var(--font-size16);
+		font-size: var(--font-size20);
 
 		border: none;
 		border-radius: 6px;
 	}
 	&__textarea-additional {
 		width: 100%;
-		margin-bottom: 20px;
-		font-family: Kyiv Type Sans Regular2;
-		border-radius: 6px;
 		padding: 10px;
+		margin-bottom: 20px;
+		resize: none;
+		font-family: Kyiv Type Sans Regular2;
+		font-size: var(--font-size20);
+
+		border-radius: 6px;
 	}
 	&__button {
 		width: 50%;
-		background-color: var(--main-bg);
 		padding: 10px;
 		font-family: Kyiv Type Sans Black2;
+		font-size: var(--font-size20);
+
 		border-radius: 6px;
+		background-color: var(--main-bg);
 		color: var(--font-color-bl);
+		transition: background-color 300ms linear;
 		@media (min-width: 420px) {
 			padding: 20px;
+		}
+		&:hover {
+			background-color: var(--header-bg);
 		}
 	}
 }
@@ -84,10 +93,26 @@
 	font-family: Kyiv Type Sans Black2;
 	font-size: var(--font-size22);
 	margin-bottom: 10px;
+	&-wrapper {
+		margin-bottom: 10px;
+	}
 }
 .close-form {
 	cursor: pointer;
 	position: absolute;
 	top: 3%;
 	right: 3%;
+	fill: #fff;
+	transition: fill 300ms linear;
+
+	&:hover {
+		fill: var(--main-bg);
+	}
+}
+.uncorrected {
+	outline: 3px solid red;
+}
+
+#fname {
+	text-transform: capitalize;
 }

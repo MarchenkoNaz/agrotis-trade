@@ -1,4 +1,3 @@
-
 new Swiper("#Swiper", {
 	spaceBetween: 30,
 	autoplay: {
