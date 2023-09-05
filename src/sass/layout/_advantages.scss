@@ -26,6 +26,9 @@
 				url("../images/dekstop/advantages-background@2.jpg");
 		}
 	}
+	& > .container {
+		overflow: hidden;
+	}
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -38,12 +41,17 @@
 	}
 }
 .slideshow-container {
+	display: flex;
 	padding: 20px;
 	margin-bottom: 20px;
 	min-width: 290px;
+	max-width: 430px;
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
 	background-color: rgba(0, 0, 0, 0.4);
+}
+.swiper-wrapper {
+	display: flex;
 }
 .card {
 	padding-top: 20px;

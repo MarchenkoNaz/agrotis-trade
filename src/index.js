@@ -1,4 +1,3 @@
-import './js/menu.js'
-import './js/header.js'
-import './js/accordion.js'
-import './js/modal.js'
+import './js/accordion'
+import './js/controls'
+import './js/helpers'
