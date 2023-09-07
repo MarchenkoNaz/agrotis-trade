@@ -1,6 +1,12 @@
 .footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
 	background-color: #000;
 	color: var(--font-color-wh);
+	transform: translateY(100%);
+	transition: transform 300ms linear;
 
 	&-text {
 		margin-bottom: 10px;
@@ -14,4 +20,7 @@
 		text-transform: uppercase;
 		font-size: var(--font-size12);
 	}
+}
+.visible {
+	transform: translateY(0%);
 }

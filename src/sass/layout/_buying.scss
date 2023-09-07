@@ -145,6 +145,14 @@
 		@media (min-width: 900px) {
 			left: -7%;
 		}
+		@media (min-width: 1024px) {
+			top: 28%;
+			left: -26%;
+		}
+		@media (min-width: 1200px) {
+			top: 3%;
+			left: -19%;
+		}
 	}
 	&-right {
 		position: absolute;
@@ -190,10 +198,16 @@
 				background-image: url("../images/dekstop/buying-background-right@2.png");
 			}
 		}
+		@media (min-width: 1024px) {
+			width: 100%;
+			top: -15%;
+			right: -27%;
+		}
 		@media (min-width: 1200px) {
-			top: -25%;
-
+			transform: scale(0.2);
 			height: 100%;
+			top: -40%;
+			right: -40%;
 		}
 	}
 }
