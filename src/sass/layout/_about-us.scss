@@ -87,6 +87,7 @@
 		@media (min-width: 768px) {
 			display: flex;
 			justify-content: space-around;
+			margin-bottom: 20px;
 		}
 	}
 	&__map {
@@ -114,7 +115,8 @@
 		display: block;
 	}
 	@media (min-width: 1024px) {
-		width: 450px;
+		min-width: 320px;
+		max-width: 450px;
 		display: block;
 	}
 }

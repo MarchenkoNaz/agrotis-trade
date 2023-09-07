@@ -1,10 +1,13 @@
 const footer = document.querySelector('.footer')
 const sections = document.querySelectorAll('main .section')
 
+const realodPage = () => {
+	location.reload();
+	return
+}
 
 window.addEventListener('load', function () {
 	if (window.innerWidth >= 1024) {
-
 		sections.forEach(section => {
 			const attribute = `${section.id}`
 			section.setAttribute('data-anchor', attribute)
@@ -17,7 +20,7 @@ window.addEventListener('load', function () {
 			delay: 0, // the delay in ms before the scroll animation starts
 			throttle: 50, // the interval in ms that the resize callback is fired
 			orientation: "vertical", // or horizontal
-			swipeThreshold: 50, // swipe / mouse drag distance (px) before firing the page change event
+			// swipeThreshold: 50, // swipe / mouse drag distance (px) before firing the page change event
 			freeScroll: false, // allow manual scrolling when dragging instead of automatically moving to next page
 			navPrevEl: false, // define an element to use to scroll to the previous page (CSS3 selector string or Element reference)
 			navNextEl: false, // define an element to use to scroll to the next page (CSS3 selector string or Element reference)
@@ -25,8 +28,6 @@ window.addEventListener('load', function () {
 
 			events: {
 				wheel: true, // enable / disable mousewheel scrolling
-				mouse: true, // enable / disable mouse drag scrolling
-				touch: true, // enable / disable touch / swipe scrolling
 				keydown: true, // enable / disable keyboard navigation
 			},
 			easing: function (currentTime, startPos, endPos, interval) {

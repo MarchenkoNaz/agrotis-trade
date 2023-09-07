@@ -26,6 +26,10 @@
 				url("../images/dekstop/advantages-background@2.jpg");
 		}
 	}
+	@media (min-width: 1024px) {
+		display: flex;
+		align-items: center;
+	}
 	& > .container {
 		overflow: hidden;
 	}
@@ -38,6 +42,9 @@
 		color: var(--font-color-wh);
 		font-size: var(--font-size40);
 		font-family: "Kyiv Type Sans Heavy2";
+		@media (min-width: 1024px) {
+			font-size: var(--font-size50);
+		}
 	}
 }
 
@@ -55,6 +62,9 @@
 		@media (min-width: 768px) {
 			font-size: var(--font-size36);
 		}
+		@media (min-width: 1024px) {
+			font-size: var(--font-size50);
+		}
 	}
 
 	&-text {
@@ -66,6 +76,9 @@
 			font-size: var(--font-size20);
 			letter-spacing: 0.6px;
 			line-height: 1.4;
+		}
+		@media (min-width: 1024px) {
+			font-size: var(--font-size36);
 		}
 	}
 }
@@ -82,10 +95,16 @@
 	border-bottom: 1px solid #fff;
 	background-color: rgba(0, 0, 0, 0.4);
 	margin-bottom: 30px;
+	@media (min-width: 1024px) {
+		height: 500px;
+	}
 }
 
 #swiper-pagination {
 	bottom: 12px;
+	@media (min-width: 1024px) {
+		top: 90%;
+	}
 }
 #swiper-pagination .swiper-pagination-bullet {
 	opacity: 1;

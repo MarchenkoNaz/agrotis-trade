@@ -1,6 +1,10 @@
 .contacts {
 	background-color: var(--main-bg);
-
+	@media (min-width: 1024px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	&-wrapper {
 		@media (min-width: 768px) {
 			display: flex;
@@ -9,6 +13,11 @@
 		}
 	}
 
+	&-content {
+		@media (min-width: 1024px) {
+			margin-right: 70px;
+		}
+	}
 	&-title {
 		margin-bottom: 40px;
 
@@ -16,6 +25,9 @@
 		font-size: var(--font-size22);
 		@media (min-width: 768px) {
 			text-align: center;
+		}
+		@media (min-width: 1024px) {
+			font-size: var(--font-size36);
 		}
 	}
 
@@ -32,12 +44,18 @@
 			margin-bottom: 0;
 			font-size: var(--font-size16);
 		}
+		@media (min-width: 1024px) {
+			font-size: var(--font-size22);
+		}
 	}
 
 	&-text {
 		margin-bottom: 14px;
 		text-align: center;
 		font-family: Kyiv Type Sans Regular;
+		@media (min-width: 1024px) {
+			font-size: var(--font-size22);
+		}
 	}
 
 	&-section {

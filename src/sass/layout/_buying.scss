@@ -44,6 +44,9 @@
 		letter-spacing: 0.65px;
 		font-size: var(--font-size20);
 		font-family: Kyiv Type Sans Regular2;
+		@media (min-width: 1024px) {
+			font-size: var(--font-size22);
+		}
 	}
 }
 
@@ -68,6 +71,9 @@
 
 		font-family: Kyiv Type Sans Regular2;
 		font-size: var(--font-size13);
+		@media (min-width: 1024px) {
+			font-size: var(--font-size22);
+		}
 	}
 
 	&__wrapper-link {
@@ -96,6 +102,9 @@
 	font-family: Kyiv Type Sans Regular2;
 	&__red {
 		color: #ff0000;
+	}
+	@media (min-width: 1024px) {
+		font-size: var(--font-size16);
 	}
 }
 
@@ -146,12 +155,14 @@
 			left: -7%;
 		}
 		@media (min-width: 1024px) {
-			top: 28%;
+			top: 0;
 			left: -26%;
 		}
 		@media (min-width: 1200px) {
-			top: 3%;
-			left: -19%;
+			transform: scale(1);
+			top: 0%;
+			// left: -19%;
+			left: 0%;
 		}
 	}
 	&-right {
@@ -199,15 +210,20 @@
 			}
 		}
 		@media (min-width: 1024px) {
-			width: 100%;
-			top: -15%;
-			right: -27%;
+			height: 100%;
+			// width: 100%;
+			// top: -29%;
+			// top: -35%;
+			// right: -35%;
+			top: -25%;
+			right: -13%;
+			transform: scale(0.3);
 		}
 		@media (min-width: 1200px) {
-			transform: scale(0.2);
 			height: 100%;
-			top: -40%;
-			right: -40%;
+			top: -15%;
+			right: -11%;
+			transform: scale(0.6);
 		}
 	}
 }

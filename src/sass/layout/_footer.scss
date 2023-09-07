@@ -13,12 +13,24 @@
 		font-family: Kyiv Type Sans Bold 2;
 		text-transform: uppercase;
 		font-size: var(--font-size16);
+		@media (min-width: 1024px) {
+			margin-bottom: 0px;
+			margin-right: 20px;
+		}
 	}
 
 	&-copyright {
 		font-family: Kyiv Type Sans Bold 2;
 		text-transform: uppercase;
 		font-size: var(--font-size12);
+	}
+}
+.content-wrapper__footer {
+	@media (min-width: 1024px) {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
 	}
 }
 .visible {
