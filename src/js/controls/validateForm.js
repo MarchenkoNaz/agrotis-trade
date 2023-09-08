@@ -32,7 +32,6 @@ const onSubmit = (e) => {
 		return notifications('error', 'Введіть коректну пошта', 'Неправильно введена пошта!')
 	}
 	else {
-		console.log(phone.value.length);
 		form.reset()
 		console.log(UserData);
 		return notifications('success', 'Дані відправлені', 'Очікуйте на дзвінок найближчим часом!')

@@ -20,12 +20,13 @@
 	}
 
 	&-copyright {
-		font-family: Kyiv Type Sans Bold 2;
+		font-family: Kyiv Type Sans Bold2;
 		text-transform: uppercase;
 		font-size: var(--font-size12);
 	}
 }
 .content-wrapper__footer {
+	text-align: center;
 	@media (min-width: 1024px) {
 		display: flex;
 		flex-direction: row;

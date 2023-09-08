@@ -69,9 +69,11 @@
 	&__text {
 		margin-bottom: 10px;
 
-		font-family: Kyiv Type Sans Regular2;
+		font-family: Kyiv Type Sans Bold2;
 		font-size: var(--font-size13);
 		@media (min-width: 1024px) {
+			margin-bottom: 30px;
+
 			font-size: var(--font-size22);
 		}
 	}
@@ -104,6 +106,7 @@
 		color: #ff0000;
 	}
 	@media (min-width: 1024px) {
+		margin-bottom: 30px;
 		font-size: var(--font-size16);
 	}
 }
@@ -161,8 +164,7 @@
 		@media (min-width: 1200px) {
 			transform: scale(1);
 			top: 0%;
-			// left: -19%;
-			left: 0%;
+			left: -15%;
 		}
 	}
 	&-right {
@@ -211,19 +213,20 @@
 		}
 		@media (min-width: 1024px) {
 			height: 100%;
-			// width: 100%;
-			// top: -29%;
-			// top: -35%;
-			// right: -35%;
-			top: -25%;
-			right: -13%;
+			// // width: 100%;
+			// // top: -29%;
+			// // top: -35%;
+			// // right: -35%;
+			// top: -25%;
+			// right: -13%;
+			// transform: scale(0.3);
+			// height: 100%;
+			top: -35%;
+			right: -35%;
 			transform: scale(0.3);
+			width: 100%;
 		}
 		@media (min-width: 1200px) {
-			height: 100%;
-			top: -15%;
-			right: -11%;
-			transform: scale(0.6);
 		}
 	}
 }
