@@ -42,7 +42,7 @@
 		color: var(--font-color-wh);
 		font-size: var(--font-size40);
 		font-family: "Kyiv Type Sans Heavy2";
-		@media (min-width: 1024px) {
+		@media (min-width: 1200px) {
 			font-size: var(--font-size50);
 		}
 	}
@@ -62,7 +62,8 @@
 		@media (min-width: 768px) {
 			font-size: var(--font-size36);
 		}
-		@media (min-width: 1024px) {
+
+		@media (min-width: 1200px) {
 			font-size: var(--font-size50);
 		}
 	}
@@ -78,6 +79,9 @@
 			line-height: 1.4;
 		}
 		@media (min-width: 1024px) {
+			font-size: var(--font-size20);
+		}
+		@media (min-width: 1200px) {
 			font-size: var(--font-size36);
 		}
 	}
@@ -95,7 +99,11 @@
 	border-bottom: 1px solid #fff;
 	background-color: rgba(0, 0, 0, 0.4);
 	margin-bottom: 30px;
+
 	@media (min-width: 1024px) {
+		height: 300px;
+	}
+	@media (min-width: 1200px) {
 		height: 500px;
 	}
 }
