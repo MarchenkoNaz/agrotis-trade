@@ -72,7 +72,7 @@
 		font-family: Kyiv Type Sans Bold2;
 		font-size: var(--font-size13);
 		@media (min-width: 1024px) {
-			margin-bottom: 30px;
+			margin-bottom: 20px;
 
 			font-size: var(--font-size22);
 		}
@@ -106,7 +106,7 @@
 		color: #ff0000;
 	}
 	@media (min-width: 1024px) {
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 		font-size: var(--font-size16);
 	}
 }
@@ -163,8 +163,13 @@
 		}
 		@media (min-width: 1200px) {
 			transform: scale(1);
-			top: 0%;
-			left: -15%;
+			top: 16%;
+			left: -23%;
+		}
+		@media (min-width: 1440px) {
+			transform: scale(1);
+			top: 3%;
+			left: -17%;
 		}
 	}
 	&-right {
