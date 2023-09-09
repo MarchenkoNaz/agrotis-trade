@@ -37,13 +37,13 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	&-title {
-		margin-bottom: 70px;
+		margin-bottom: 40px;
 		letter-spacing: 1.7px;
 		color: var(--font-color-wh);
 		font-size: var(--font-size40);
 		font-family: "Kyiv Type Sans Heavy2";
 		@media (min-width: 1200px) {
-			font-size: var(--font-size50);
+			font-size: var(--font-size40);
 		}
 	}
 }
@@ -64,7 +64,7 @@
 		}
 
 		@media (min-width: 1200px) {
-			font-size: var(--font-size50);
+			font-size: var(--font-size36);
 		}
 	}
 
@@ -82,7 +82,7 @@
 			font-size: var(--font-size20);
 		}
 		@media (min-width: 1200px) {
-			font-size: var(--font-size36);
+			font-size: var(--font-size22);
 		}
 	}
 }
@@ -104,16 +104,21 @@
 		height: 300px;
 	}
 	@media (min-width: 1200px) {
-		height: 500px;
+		height: 350px;
 	}
 }
 .swiper-pagination {
 	z-index: 3 !important;
 }
+.swiper-slide {
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: center !important;
+}
 #swiper-pagination {
 	bottom: 12px;
 	@media (min-width: 1024px) {
-		top: 90%;
+		top: 85%;
 	}
 }
 #swiper-pagination .swiper-pagination-bullet {
