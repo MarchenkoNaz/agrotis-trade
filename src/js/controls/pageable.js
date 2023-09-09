@@ -31,8 +31,6 @@ function setActiveSection() {
 }
 
 
-
-
 const initPageable = () => {
 	sections.forEach(section => {
 		const attribute = `${section.id}`
@@ -44,7 +42,7 @@ const initPageable = () => {
 		childSelector: "[data-anchor]", // CSS3 selector string for the pages
 		pips: false, // display the pips
 		animation: 500, // the duration in ms of the scroll animation
-		delay: 0, // the delay in ms before the scroll animation starts
+		delay: 100, // the delay in ms before the scroll animation starts
 		throttle: 200, // the interval in ms that the resize callback is fired
 		orientation: "vertical", // or horizontal
 		freeScroll: false, // allow manual scrolling when dragging instead of automatically moving to the next page
