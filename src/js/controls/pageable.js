@@ -1,8 +1,37 @@
 const footer = document.querySelector('.footer')
 const sections = document.querySelectorAll('main .section')
 const navigation = document.querySelector('.navigation-list')
+const navLinks = document.querySelectorAll('.navigation-link')
 
 let pageable;
+
+function setActiveSection() {
+	let activeSection = null;
+
+	sections.forEach(section => {
+		const rect = section.getBoundingClientRect();
+
+		if (rect.top <= 0 && rect.bottom >= 0) {
+			activeSection = section;
+		}
+	});
+	if (activeSection) {
+		const activeSectionId = activeSection.getAttribute('id');
+
+		navLinks.forEach(navLink => {
+			if (navLink.id.includes(activeSectionId)) {
+				navLink.classList.add('active');
+			}
+			else {
+				navLink.classList.remove('active')
+			}
+		})
+	}
+	return activeSection;
+}
+
+
+
 
 const initPageable = () => {
 	sections.forEach(section => {
@@ -11,27 +40,25 @@ const initPageable = () => {
 	})
 	navigation.classList.add('anchors')
 
-
 	pageable = new Pageable("#container", {
 		childSelector: "[data-anchor]", // CSS3 selector string for the pages
-		anchors: ['hero', 'services', 'buying', 'advantages', 'about-us', 'contacts'], // define the page anchors
 		pips: false, // display the pips
 		animation: 500, // the duration in ms of the scroll animation
 		delay: 0, // the delay in ms before the scroll animation starts
-		throttle: 50, // the interval in ms that the resize callback is fired
+		throttle: 200, // the interval in ms that the resize callback is fired
 		orientation: "vertical", // or horizontal
-		// swipeThreshold: 50, // swipe / mouse drag distance (px) before firing the page change event
-		freeScroll: false, // allow manual scrolling when dragging instead of automatically moving to next page
-		navPrevEl: false, // define an element to use to scroll to the previous page (CSS3 selector string or Element reference)
-		navNextEl: false, // define an element to use to scroll to the next page (CSS3 selector string or Element reference)
+		freeScroll: false, // allow manual scrolling when dragging instead of automatically moving to the next page
+		navPrevEl: true, // define an element to use to scroll to the previous page (CSS3 selector string or Element reference)
+		navNextEl: true, // define an element to use to scroll to the next page (CSS3 selector string or Element reference)
 		infinite: false, // enable infinite scrolling (from 0.4.0)
 
 		events: {
 			wheel: true, // enable / disable mousewheel scrolling
+			mouse: false, // enable / disable mouse drag scrolling
+			touch: true, // enable / disable touch / swipe scrolling
 			keydown: true, // enable / disable keyboard navigation
 		},
 		easing: function (currentTime, startPos, endPos, interval) {
-			// the easing function used for the scroll animation
 			return -endPos * (currentTime /= interval) * (currentTime - 2) + startPos;
 		},
 		onInit: function () {
@@ -48,13 +75,15 @@ const initPageable = () => {
 		},
 		onScroll: function () {
 			footer.classList.remove("visible")
-
 		},
 		onFinish: function () {
 			footer.classList.add("visible")
+			setActiveSection()
+
 		},
 	});
 }
+
 const destroyPageable = () => {
 	pageable.destroy();
 	pageable = null;
@@ -64,6 +93,7 @@ const destroyPageable = () => {
 	})
 	navigation.classList.remove('anchors')
 }
+
 function checkWindowSize() {
 	if (window.innerWidth >= 1024) {
 		if (!pageable) {

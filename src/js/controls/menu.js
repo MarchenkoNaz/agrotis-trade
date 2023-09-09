@@ -9,7 +9,6 @@
 		burgerBtn.classList.add('active');
 		document.addEventListener('click', closeMenuOnOutsideClick);
 	};
-	console.dir(headerMenu);
 	const closeMenu = () => {
 		headerMenu.classList.remove('menu-open');
 		burgerBtn.classList.remove('active');

@@ -21,6 +21,7 @@
 	&-content__wrapper {
 		@media (min-width: 1024px) {
 			display: flex;
+			justify-content: center;
 		}
 	}
 	&__wrapper {
@@ -72,6 +73,7 @@
 	z-index: 3;
 	@media (min-width: 1024px) {
 		margin-left: 30px;
+		margin-right: 0;
 	}
 	&__text {
 		margin-bottom: 10px;
