@@ -107,7 +107,9 @@
 		height: 500px;
 	}
 }
-
+.swiper-pagination {
+	z-index: 3 !important;
+}
 #swiper-pagination {
 	bottom: 12px;
 	@media (min-width: 1024px) {
