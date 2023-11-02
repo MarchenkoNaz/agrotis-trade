@@ -27,7 +27,6 @@ const handleScroll = () => {
 
 window.addEventListener('scroll', handleScroll);
 
-// Викликаємо функцію при завантаженні сторінки, щоб ініціалізувати стан заголовка
 if (screenWidth() <= 1024) {
 	toggleHeader();
 }
