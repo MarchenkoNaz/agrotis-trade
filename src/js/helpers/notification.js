@@ -1,5 +1,4 @@
 import Notify from 'simple-notify'
-import 'simple-notify/dist/simple-notify.min.css'
 
 const notifications = (type, title, text) => new Notify({
 	status: `${type}`,
@@ -20,3 +19,4 @@ const notifications = (type, title, text) => new Notify({
 })
 
 export default notifications
+
