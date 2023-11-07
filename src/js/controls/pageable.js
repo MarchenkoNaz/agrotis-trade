@@ -77,7 +77,6 @@ const initPageable = () => {
 		onFinish: function () {
 			footer.classList.add("visible")
 			setActiveSection()
-
 		},
 	});
 }
