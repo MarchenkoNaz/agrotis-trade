@@ -1,0 +1,79 @@
+@use "../utils";
+.el-hero {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	padding-top: 100px;
+	padding-bottom: 26px;
+
+	color: var(--font-color-bl);
+	background-color: var(--main-bg);
+
+	letter-spacing: 1.7px;
+	border-bottom: 1px solid black;
+	&__title {
+		margin-bottom: 35px;
+
+		text-align: center;
+		text-transform: uppercase;
+
+		letter-spacing: 1.7px;
+
+		font-family: "Kyiv Type Sans Black2";
+
+		font-size: var(--font-size14);
+		@media (min-width: 420px) {
+			font-size: var(--font-size22);
+		}
+		@media (min-width: 768px) {
+			font-size: var(--font-size40);
+		}
+	}
+
+	&__subtitle {
+		padding-left: 8px;
+		padding-right: 8px;
+		margin-bottom: 40px;
+		width: 100%;
+		font-family: "Kyiv Type Sans Medium2";
+		font-size: var(--font-size15);
+
+		text-align: center;
+
+		letter-spacing: 0.42px;
+		@media (min-width: 768px) {
+			font-size: var(--font-size22);
+		}
+	}
+	&__wrapper-link .el-hero__link {
+		text-align: center;
+	}
+	&__link {
+		font-family: "Kyiv Type Sans Regular";
+		font-size: var(--font-size13);
+		text-decoration: underline;
+		text-align: center;
+
+		letter-spacing: 0.42px;
+		transition: color 200ms linear;
+		@media (min-width: 420px) {
+			font-size: var(--font-size16);
+		}
+		@media (min-width: 768px) {
+			font-size: var(--font-size20);
+		}
+		&:hover {
+			color: blue;
+		}
+	}
+	&__svg {
+		transform: rotate(90deg);
+	}
+}
+
+.el-hero__link:hover + .el-hero__svg {
+	color: blue;
+}
