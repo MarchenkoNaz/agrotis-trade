@@ -3,7 +3,8 @@ import notifications from '../helpers/notification.js'
 
 dotenv.config()
 
-const { TELEGRAM_TOKEN, TELEGRAM_CHAT_ID } = process.env
+const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN;
+const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 const TELEGRAM_API = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
 
 export const sendMessageTelegram = async (formData) => {
