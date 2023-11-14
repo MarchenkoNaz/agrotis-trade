@@ -9,7 +9,7 @@ function openModal() {
 	document.body.style.overflow = 'hidden';
 }
 
-function closeModal() {
+export function closeModal() {
 	modalbackdrop.classList.remove('active');
 	modal.classList.remove('active');
 	document.body.style.overflow = '';
