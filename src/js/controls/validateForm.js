@@ -1,52 +1,43 @@
-import IMask from 'imask';
+import { sendMessageTelegram } from '../api/telegram.js';
 import notifications from '../helpers/notification.js'
 import * as EmailValidator from 'email-validator';
 
-
 const form = document.querySelector('.js-from');
-const { fname, email, phone, additInfo, submitBtn } = form.elements
-const onSubmit = (e) => {
-	e.preventDefault();
-	mask.updateValue();
+
+
+export function formValidator(UserData) {
 	const delay = 3000
-	const correctMail = EmailValidator.validate(email.value);
 
-	const UserData = {
-		name: fname.value,
-		email: email.value,
-		phone: phone.value,
-		additInfo: additInfo.value
-	}
+	const nameField = form.elements.fname
+	const emailField = form.elements.email
 
-	if (!fname.value || !email.value || !phone.value || !phone.value.length === 17) {
+	const correctMail = EmailValidator.validate(UserData.email);
+
+	if (!UserData.name || !UserData.email || UserData.phone.length !== 17) {
 		return notifications('warning', 'Заповніть всі поля', 'Потрібно заповнити всі поля форми!')
-
 	}
-	else if (!correctMail) {
-		email.classList.add('uncorrected');
+	else
+		if (!isNaN(Number(UserData.name))) {
 
-		setTimeout(function () {
-			email.classList.remove('uncorrected');
-		}, delay);
+			nameField.classList.add('uncorrected');
 
-		return notifications('error', 'Введіть коректну пошта', 'Неправильно введена пошта!')
-	}
-	else {
-		form.reset()
-		console.log(UserData);
-		return notifications('success', 'Дані відправлені', 'Очікуйте на дзвінок найближчим часом!')
-	}
+			setTimeout(function () {
+				nameField.classList.remove('uncorrected');
+			}, delay);
+
+			return notifications('error', "Введіть правильне ім'я", "Ім'я не може складатися з цифр")
+		}
+		else
+			if (!correctMail) {
+				emailField.classList.add('uncorrected');
+
+				setTimeout(function () {
+					emailField.classList.remove('uncorrected');
+				}, delay);
+
+				return notifications('error', 'Введіть коректну пошта', 'Неправильно введена пошта!')
+			}
+			else {
+				sendMessageTelegram(UserData)
+			}
 }
-
-
-
-submitBtn.addEventListener('click', (e) => {
-	onSubmit(e)
-})
-
-const inputPhone = document.getElementById('phone');
-const maskOptions = {
-	mask: '+{38}(000)000-00-00',
-	lazy: false,
-};
-const mask = IMask(inputPhone, maskOptions);
