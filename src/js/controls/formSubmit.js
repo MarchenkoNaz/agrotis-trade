@@ -1,6 +1,5 @@
 import IMask from 'imask';
 import { formValidator } from './validateForm';
-import { closeModal } from './modal';
 
 
 
@@ -21,7 +20,6 @@ const onSubmit = (e) => {
 	}
 	formValidator(UserData)
 
-	closeModal()
 }
 
 formBtn.addEventListener('click', (e) => {
