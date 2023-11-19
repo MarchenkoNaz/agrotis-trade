@@ -1,12 +1,12 @@
 import dotenv from 'dotenv'
 import notifications from '../helpers/notification.js'
-import { closeModal } from '../controls/modal.js';
+import { closeModal } from '../modal/modal.js';
 
 dotenv.config()
 
-const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN;
-const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
-const TELEGRAM_API = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
+// const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN;
+// const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+// const TELEGRAM_API = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
 
 export const sendMessageTelegram = async (formData) => {
 	const form = document.querySelector('.js-from');

@@ -1,5 +1,5 @@
 import IMask from 'imask';
-import { formValidator } from './validateForm';
+import { formValidator } from '../controls/validateForm';
 
 
 
