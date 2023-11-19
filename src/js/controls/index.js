@@ -1,6 +1,3 @@
 import './header.js'
-import './menu.js'
-import './modal.js'
-import './formSubmit.js'
 import './pageable.js'
 import './validateForm.js'

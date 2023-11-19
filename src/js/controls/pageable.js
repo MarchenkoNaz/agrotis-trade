@@ -2,6 +2,8 @@ const footer = document.querySelector('.footer')
 const sections = document.querySelectorAll('main .section')
 const navigation = document.querySelector('.navigation-list')
 const navLinks = document.querySelectorAll('.navigation-link')
+const modalWindow = document.querySelector('.js-modal')
+
 
 let pageable;
 
@@ -89,6 +91,7 @@ const destroyPageable = () => {
 		section.removeAttribute('data-anchor', attribute)
 	})
 	navigation.classList.remove('anchors')
+	footer.classList.remove('.visible')
 }
 
 function checkWindowSize() {
@@ -104,7 +107,7 @@ function checkWindowSize() {
 }
 
 function handleOrientationChange() {
-	if (window.orientation === 0) {
+	if (screen.orientation === 0) {
 		if (pageable) {
 			destroyPageable()
 		}
@@ -114,6 +117,7 @@ function handleOrientationChange() {
 		}
 	}
 }
+
 
 document.addEventListener('DOMContentLoaded', checkWindowSize);
 window.addEventListener('resize', checkWindowSize);

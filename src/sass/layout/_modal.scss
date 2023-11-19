@@ -84,6 +84,11 @@
 		@media (min-width: 420px) {
 			padding: 20px;
 		}
+		&:disabled,
+		&[disabled] {
+			background-color: gray;
+			color: var(--font-color-wh);
+		}
 		&:hover {
 			background-color: var(--header-bg);
 		}
