@@ -6,38 +6,43 @@ const form = document.querySelector('.js-from');
 
 
 export function formValidator(UserData) {
-	const delay = 3000
 
-	const nameField = form.elements.fname
-	const emailField = form.elements.email
+	const nameField = form.elements.fname;
+	const emailField = form.elements.email;
+	const mobileField = form.elements.phone;
+
 
 	const correctMail = EmailValidator.validate(UserData.email);
+	const regexUserName = new RegExp('^(?=[а-яА-Я]{3,15}$)(?!.*[_.]{2})[^_.].*[^_.]$');
 
-	if (!UserData.name || !UserData.email || UserData.phone.length !== 17) {
-		return notifications('warning', 'Заповніть всі поля', 'Потрібно заповнити всі поля форми!')
+	if (!UserData.name && !UserData.email && !UserData.phone) {
+		addStatusField('warning', [nameField, emailField, mobileField], 'Заповніть всі поля', 'Потрібно заповнити всі поля форми!')
 	}
-	else
-		if (!isNaN(Number(UserData.name))) {
+	else if (!UserData.name.match(regexUserName)) {
+		addStatusField('error', [nameField], "Введіть правильне ім'я українською", "Ім'я не може складатися з цифр, '.' , '-' , '_'  ")
+	}
+	else if (!correctMail) {
+		addStatusField('error', [emailField], 'Введіть коректну пошта')
+	}
+	else if (UserData.phone.length !== 17) {
+		addStatusField('error', [mobileField], 'Введіть коректний номер телефону')
+	}
+	else {
+		sendMessageTelegram(UserData)
+	}
+}
 
-			nameField.classList.add('uncorrected');
 
-			setTimeout(function () {
-				nameField.classList.remove('uncorrected');
-			}, delay);
+function addStatusField(status, fields, ErrorMessage, Message) {
+	const delay = 3000
 
-			return notifications('error', "Введіть правильне ім'я", "Ім'я не може складатися з цифр")
-		}
-		else
-			if (!correctMail) {
-				emailField.classList.add('uncorrected');
+	fields.map(field => {
+		field.classList.add('uncorrected');
+		setTimeout(function () {
+			field.classList.remove('uncorrected');
+		}, delay);
+	})
 
-				setTimeout(function () {
-					emailField.classList.remove('uncorrected');
-				}, delay);
 
-				return notifications('error', 'Введіть коректну пошта', 'Неправильно введена пошта!')
-			}
-			else {
-				sendMessageTelegram(UserData)
-			}
+	return notifications(`${status}`, `${ErrorMessage}`, `${Message || ''}`)
 }
